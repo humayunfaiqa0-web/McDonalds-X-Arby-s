@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@400;700;900&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Archivo Black", sans-serif;
+  --font-slab: "Roboto Slab", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand-red: #D11226;
+  --color-brand-yellow: #FFBC0D;
+  --color-brand-black: #000000;
+  --color-brand-dark-gray: #0D0D0D;
+  --color-brand-light-gray: #1E1E1E;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-black);
+    color: #F3F4F6;
+    font-family: var(--font-sans);
+  }
+  
+  /* Arby's style custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-brand-black);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-brand-red);
+    border: 2px solid var(--color-brand-black);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-yellow);
+  }
+}
+
+/* Custom aggressive wood texture or dark overlay elements */
+.wood-texture {
+  background-color: #050505;
+  background-image: radial-gradient(rgba(209, 18, 38, 0.15) 1px, transparent 0),
+                    radial-gradient(rgba(255, 188, 13, 0.05) 1px, transparent 0);
+  background-size: 8px 8px;
+  background-position: 0 0, 4px 4px;
+}
+
+/* Aggressive comic-book/Arby's thick black outline style */
+.heavy-outline {
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+}
+
+.heavy-outline-red {
+  box-shadow: 4px 4px 0px 0px var(--color-brand-red);
+}
+
+.heavy-outline-yellow {
+  box-shadow: 4px 4px 0px 0px var(--color-brand-yellow);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 25s linear infinite;
+}
+

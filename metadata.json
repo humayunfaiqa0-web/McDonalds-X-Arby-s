@@ -1,0 +1,6 @@
+{
+  "name": "McDonald's Heavy-Duty Cast",
+  "description": "McDonald's classic menu re-imagined with a bold, towering, meat-centric aesthetic. Big bold fonts, extreme calorie-packed imagery, and our ultimate 'I'M LOVIN' IT' energy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
